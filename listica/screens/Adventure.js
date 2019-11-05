@@ -4,11 +4,37 @@ import{LinearGradient} from 'expo-linear-gradient'
 
 import { Card, Badge, Button, Block, Text } from '../components';
 import { theme } from '../constants';
+import {Ionicons} from 'react-native-vector-icons';
 
 
 const { width } = Dimensions.get('window');
 
 class Adventure extends Component {
+  static navigationOptions = ({navigation}) => {
+    return {
+      headerTitle:'ADVENTURE',
+      headerRight:<Ionicons style={{marginRight:10}} name="md-menu" size={32} color='white' onPress={()=>navigation.openDrawer()}/>,
+      headerLeft:<Ionicons style={{marginLeft:10}} name="md-arrow-back" size={32} color='white' onPress={()=>navigation.goBack()}/>,
+
+      headerTitleStyle: {
+        flex: 1,
+        color: '#fff',
+        textAlign: 'center',
+        alignSelf: 'center',
+        fontWeight: 'normal',
+        fontSize: 16,
+        fontFamily:'Arial_Rounded_MT'
+        
+      },
+
+      headerStyle: {
+        backgroundColor: '#7c0000',
+        color: '#fff',
+        height:35
+      },
+    }
+  }
+
   
   render() {
     const {  navigation } = this.props;
@@ -19,20 +45,7 @@ class Adventure extends Component {
 
       
       <View style={styles.back} >
-        <View style={styles.viewHeader}>
-        
-        <View   style={styles.header}>
-           <Text style={styles.text} bold>ADVENTURE</Text>
-        </View>
-       
-      
-        <View style={styles.header}>
-        <Image style ={styles.deli} source={require('../assets/icons/road.png')}/>
-        </View>
-        </View>
-       
-        <View style={styles.view2}>
-        <ImageBackground source={require('../assets/icons/FondoAdventure.png')} 
+         <ImageBackground source={require('../assets/Fondos/ADVENTURE.png')} 
         style={{
          
               flex: 1,         
@@ -43,6 +56,20 @@ class Adventure extends Component {
               resizeMode:'stretch',
               
         }}/>
+        <View style={styles.viewHeader}>
+        
+        <View   style={styles.header}>
+           <Text style={styles.text} ></Text>
+        </View>
+       
+      
+        <View style={styles.header}>
+        <Image style ={styles.deli} source={require('../assets/icons/road.png')}/>
+        </View>
+        </View>
+       
+        <View style={styles.view2}>
+       
      
           
           <TouchableOpacity onPress={() => navigation.navigate('')}>
@@ -50,7 +77,7 @@ class Adventure extends Component {
             style={styles.linearGradient}>
             <Image style={styles.deli2} source={require('../assets/icons/road.png')}/>
             <Text style={styles.buttonText} h3 bold>
-              ECO AVENTURE PARK 
+                NATURE PARK 
             </Text>
           </View>
               
@@ -128,7 +155,9 @@ deli:{
     backgroundColor: 'transparent',
     marginVertical:12,
     padding:12,
-    width:'85%'
+    width:'85%',
+    fontFamily:'Arial_Rounded_MT',
+    fontWeight: 'bold',
   
   },
   text:{

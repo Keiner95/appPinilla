@@ -17,14 +17,24 @@ import House from '../screens/House';
 import Construction from '../screens/Construction';
 import Garden from '../screens/Garden';
 import MealController from '../controller/MealController'
-import Favoritos from '../screens/Favoritos';
+
 
 
 import { theme } from '../constants';
 
 const Router = createStackNavigator({
   Welcome: {screen: Welcome},
-  Meal: {screen: Meal}
+  Meal: {screen: Meal},
+  Wellness: {screen: Wellness},
+  Market: {screen: Market},
+  MealController: {screen: MealController},
+  Garden: {screen: Garden},
+  Construction: {screen: Construction},
+  House: {screen: House},
+  Art: {screen: Art},
+  Transfer: {screen: Transfer},
+  Adventure: {screen: Adventure},
+  Golf: {screen: Golf},
 });
 
 const Drawer = createDrawerNavigator({

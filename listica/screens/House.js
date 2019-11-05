@@ -4,11 +4,37 @@ import{LinearGradient} from 'expo-linear-gradient'
 
 import { Card, Badge, Button, Block, Text } from '../components';
 import { theme } from '../constants';
+import {Ionicons} from 'react-native-vector-icons';
 
 
 const { width } = Dimensions.get('window');
 
 class House extends Component {
+  static navigationOptions = ({navigation}) => {
+    return {
+      headerTitle:'HOME',
+      headerRight:<Ionicons style={{marginRight:10}} name="md-menu" size={32} color='white' onPress={()=>navigation.openDrawer()}/>,
+      headerLeft:<Ionicons style={{marginLeft:10}} name="md-arrow-back" size={32} color='white' onPress={()=>navigation.goBack()}/>,
+
+      headerTitleStyle: {
+        flex: 1,
+        color: '#fff',
+        textAlign: 'center',
+        alignSelf: 'center',
+        fontWeight: 'normal',
+        fontSize: 16,
+        fontFamily:'Arial_Rounded_MT'
+        
+      },
+
+      headerStyle: {
+        backgroundColor: '#7c0000',
+        color: '#fff',
+        height:35
+      },
+    }
+  }
+
   
   render() {
     const {  navigation } = this.props;
@@ -19,10 +45,21 @@ class House extends Component {
 
       
       <View style={styles.back} >
+          <ImageBackground source={require('../assets/Fondos/HOME.png')} 
+          style={{
+          
+            flex: 1,         
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            justifyContent: 'center',
+            resizeMode:'stretch',
+            
+          }}/>
         <View style={styles.viewHeader}>
         
         <View   style={styles.header}>
-           <Text style={styles.text}  bold>In-HOME SERVICES</Text>
+           <Text style={styles.text}  ></Text>
         </View>
        
       
@@ -33,24 +70,14 @@ class House extends Component {
         
        
         <View style={styles.view2}>
-        <ImageBackground source={require('../assets/icons/FondoIn-HomeServices.png')} 
-        style={{
-         
-          flex: 1,         
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          justifyContent: 'center',
-          resizeMode:'stretch',
-          
-        }}/>
+        
      
           
            <TouchableOpacity onPress={() => navigation.navigate('')}>
            <View
             style={styles.linearGradient}>
             <Image style={styles.deli2} source={require('../assets/icons/LavanderíaLasOlas.png')}/>
-            <Text style={styles.buttonText} h3 bold>
+            <Text style={styles.buttonText} >
             LAVANDERÍA LAS OLAS 
             </Text>
           </View>        
@@ -61,23 +88,14 @@ class House extends Component {
            <View
             style={styles.linearGradient}>
             <Image style={styles.deli2} source={require('../assets/icons/PSA_portones_y_sistemas.png')}/>
-            <Text style={styles.buttonText} h3 bold >
-            PORTONES Y SISTEMAS DE SEGURIDAD
+            <Text style={styles.buttonText} >
+            TECNO SEGURIDAD
             </Text>
           </View>
               
           </TouchableOpacity> 
 
-          <TouchableOpacity onPress={() => navigation.navigate('')}>
-           <View
-            style={styles.linearGradient}>
-            <Image style={styles.deli2} source={require('../assets/icons/home.png')}/>
-            <Text style={styles.buttonText} h3 bold >
-          MUBLERIA MORALES
-            </Text>
-          </View>
-              
-          </TouchableOpacity>
+         
 
           
           
@@ -153,7 +171,9 @@ deli:{
     backgroundColor: 'transparent',
     marginVertical:12,
     padding:12,
-    width:'85%'
+    width:'85%',
+    fontFamily:'Arial_Rounded_MT',
+    fontWeight: 'bold',
   
   },
   text:{

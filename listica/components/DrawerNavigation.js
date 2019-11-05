@@ -22,14 +22,20 @@ export default class DrawerContent extends Component {
                 </ImageBackground>
             </View>
             <View style={styles.screenContainer}>
-                <View style={[styles.screenStyle, (this.props.activeItemKey=='Welcome') ? styles.activeBackgroundColor : null]}>
-                    <Text style={[styles.screenTextStyle, (this.props.activeItemKey=='Welcome') ? styles.selectedTextStyle : null]} onPress={this.navigateToScreen('Welcome')}>Welcome</Text>
+                <View style={[styles.screenStyle, (this.props.activeItemKey=='	My Favourites') ? styles.activeBackgroundColor : null]}>
+                    <Text style={[styles.screenTextStyle, (this.props.activeItemKey=='Favourites') ? styles.selectedTextStyle : null]} onPress={this.navigateToScreen('Favourites')}>Favourites</Text>
                 </View>
-                <View style={[styles.screenStyle, (this.props.activeItemKey=='Meal') ? styles.activeBackgroundColor : null]}>
-                    <Text style={[styles.screenTextStyle, (this.props.activeItemKey=='Meal') ? styles.selectedTextStyle : null]} onPress={this.navigateToScreen('Meal')}>Meal</Text>
+                <View style={[styles.screenStyle, (this.props.activeItemKey=='Notifications') ? styles.activeBackgroundColor : null]}>
+                    <Text style={[styles.screenTextStyle, (this.props.activeItemKey=='Notifications') ? styles.selectedTextStyle : null]} onPress={this.navigateToScreen('Notifications')}>Notifications</Text>
                 </View>
-                <View style={[styles.screenStyle, (this.props.activeItemKey=='Market') ? styles.activeBackgroundColor : null]}>
-                    <Text style={[styles.screenTextStyle, (this.props.activeItemKey=='Market') ? styles.selectedTextStyle : null]} onPress={this.navigateToScreen('Market')}>Market</Text>
+                <View style={[styles.screenStyle, (this.props.activeItemKey=='Guided Tour') ? styles.activeBackgroundColor : null]}>
+                    <Text style={[styles.screenTextStyle, (this.props.activeItemKey=='Guided Tour') ? styles.selectedTextStyle : null]} onPress={this.navigateToScreen('Guided Tour')}>Guided Tour</Text>
+                </View>
+                <View style={[styles.screenStyle, (this.props.activeItemKey=='Configuration') ? styles.activeBackgroundColor : null]}>
+                    <Text style={[styles.screenTextStyle, (this.props.activeItemKey=='Configuration') ? styles.selectedTextStyle : null]} onPress={this.navigateToScreen('Configuration')}>Configuration</Text>
+                </View>
+                <View style={[styles.screenStyle, (this.props.activeItemKey=='Rate us') ? styles.activeBackgroundColor : null]}>
+                    <Text style={[styles.screenTextStyle, (this.props.activeItemKey=='Rate us') ? styles.selectedTextStyle : null]} onPress={this.navigateToScreen('Rate us')}>Rate us</Text>
                 </View>
             </View>
         </View>

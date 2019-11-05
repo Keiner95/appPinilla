@@ -24,6 +24,7 @@ class Meal extends Component {
         alignSelf: 'center',
         fontWeight: 'normal',
         fontSize: 16,
+        fontFamily:'Arial_Rounded_MT'
       },
 
       headerStyle: {
@@ -44,7 +45,7 @@ class Meal extends Component {
 
       
       <View style={styles.back} >
-        <ImageBackground source={require('../assets/icons/Prueba.png')} 
+        <ImageBackground source={require('../assets/Fondos/MEALS.png')} 
         style={{
          
           flex: 1,         
@@ -58,7 +59,7 @@ class Meal extends Component {
         <View style={styles.viewHeader}>
         
         <View   style={styles.header}>
-           <Text style={styles.text}  bold></Text>
+           <Text style={styles.text}  ></Text>
         </View>
        
       
@@ -174,14 +175,15 @@ deli:{
 
   },
   buttonText: {
-    fontFamily:'McLaren-Regular',
-    fontSize: 13,  
+    fontFamily:'Arial_Rounded_MT',
+    fontSize: 15,  
     textAlign: 'left',
     color: '#ffffff',
     backgroundColor: 'transparent',
     marginVertical:12,
     padding:12,
-    width:'85%'
+    width:'85%',
+    fontWeight: 'bold',
   
   },
   text:{

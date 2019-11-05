@@ -6,8 +6,6 @@ import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 
 import Navigation from './navigation';
-import { Block } from './components';
-import { red } from 'ansi-colors';
 
 
 
@@ -64,6 +62,18 @@ const images = [
   require('./assets/icons/TMT.png'),
   require('./assets/icons/Trip-N-Taxi.png'),
   require('./assets/icons/warning.png'),
+
+  require('./assets/Fondos/ADVENTURE.png'),
+  require('./assets/Fondos/ART.png'),
+  require('./assets/Fondos/CONSTRUCTION.png'),
+  require('./assets/Fondos/POOL.png'),
+  require('./assets/Fondos/GOLF.png'),
+  require('./assets/Fondos/HOME.png'),
+  require('./assets/Fondos/CONVENIENCESTORES.png'),
+  require('./assets/Fondos/MEALS.png'),
+  require('./assets/Fondos/TRANSFER.png'),
+  require('./assets/Fondos/MAIN.png'),
+  require('./assets/Fondos/Well.png')
 
 ];
 
@@ -123,7 +133,7 @@ export default class App extends React.Component {
 async function loadResourcesAsync() {
   await Promise.all([
     Font.loadAsync({
-      'McLaren-Regular': require('./assets/fonts/McLaren-Regular.ttf'),
+      'Arial_Rounded_MT': require('./assets/fonts/Arial_Rounded_MT.ttf'),
       
     }),
   ])
